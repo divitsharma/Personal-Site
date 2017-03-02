@@ -27,7 +27,7 @@ header {
   font-size: 1em;
 }
 /* Navigation Elements */
-.nav-bar {
+nav {
   position: fixed;
   width: 70px;
   height: 100%;
@@ -39,14 +39,21 @@ header {
 
   padding: 30px 0;
   font-size: 0.8em;
+  color: whitesmoke;
 }
 nav {
-  /*background: aquamarine;*/
-  padding: 50px 0;
-  border-right: white solid 1px;
+
 }
 nav ul{
   list-style: none;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /*background: aquamarine;*/
+  border-right: white solid 1px;
+  padding: 50px 0;
   padding-right: 20px;
   text-align: right;
 }
@@ -59,7 +66,7 @@ nav li:last-child {
   margin-bottom: 0;
 }
 nav li a, nav li a:visited{
-  color: whitesmoke;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -79,10 +86,9 @@ nav li a, nav li a:visited{
 }
 
 .top-btn, .top-btn:visited {
-  text-align: right;
-  padding-right: 20px;
+  text-align: center;
   text-decoration: none;
-  color: whitesmoke;
+  color: inherit;
 }
 /* End of LANDING */
 
