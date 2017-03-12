@@ -1,187 +1,341 @@
+/* EVERYTHING */
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+@font-face {
+    font-family: Leelawadee;
+    src: url(../assets/fonts/LeelawUI.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Leelawadee;
+    src: url(../assets/fonts/LeelaUIb.ttf);
+    font-weight: bold;
+}
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-
-  font-family: Leelawadee UI, Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Lato;
 }
+body {
+    background: rgb(229, 229, 229);
+}
+
+/* END OF EVERYTHING*/
 
 /* LANDING SECTION */
 header {
-  height: 100vh;
-
-  background-image: url("../assets/images/wallhaven-21827.jpg");
-  background-size: cover;
-  background-position: center;
+    height: 100vh;
+    background-image: url("../assets/images/Mountains.png");
+    background-size: cover;
+    background-position: center;
+    font-family: Leelawadee, Arial, sans-serif;
 }
+
 .land-content {
-  height: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;;
-  align-items: center;
-
-  color: aliceblue;
-  font-size: 1em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-/* Navigation Elements */
-nav {
-  position: fixed;
-  width: 70px;
-  height: 100vh; // should fix bug, check on iOS
-  float: left;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+h1 {
+    font-size: 300%;
+    /*undecided:   font-family: Leelawadee;*/
+}
 
-  padding: 30px 0;
-  font-size: 0.8em;
-  color: whitesmoke;
+h4 {
+    font-size: 70%;
+    font-family: Leelawadee;
+    font-weight: bold;
+    color: grey;
 }
-nav {
 
+.land-content ul {
+    margin-top: 20px;
 }
-nav ul{
-  list-style: none;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 
-  /*background: aquamarine;*/
-  border-right: white solid 1px;
-  padding: 50px 0;
-  padding-right: 20px;
-  text-align: right;
+.land-content a {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 0;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
 }
-nav li {
-  display: block;
-  height: 50px;
-  vertical-align: middle;
+
+.github {
+    background-image: url(../assets/images/svg/Github.svg);
 }
-nav li:last-child {
-  margin-bottom: 0;
+
+.behance {
+    background-image: url(../assets/images/svg/Behance.svg);
 }
-header a, header a:visited{
-  color: inherit;
-  text-decoration: none;
+
+.resume {
+    background-image: url(../assets/images/svg/ResumeIcon.svg);
+}
+/* END OF LANDING SECTION */
+
+
+header a, header a:visited {
+    color: inherit;
+    text-decoration: none;
 }
 
 .logo {
-  /*background: pink;*/
-  display: block;
-  height: 40px;
+    /*background: pink;*/
+    display: block;
+    font-size: 0;
+    height: 40px;
+    background-image: url("../assets/images/svg/DS-Logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+}
 
-  background-image: url("../assets/images/svg/DS-Logo.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.8;
-}
-.logo:hover {
-  opacity: 90;
-}
+    .logo:hover {
+        opacity: 90;
+    }
 
 .top-btn, .top-btn:visited {
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
 }
 /* End of LANDING */
 
 
-.content {
-  width: 70%;
-  margin: 0 auto;
-}
-
 [class*="col-"] {
-  float: none;
-  width: auto;
-  padding: 15px;
+    float: none;
+    width: auto;
+    padding: 15px;
 }
 
 .row {
-  padding: 10px 0;
-  min-height: 100vh;
+    padding: 10px 0;
+    min-height: 100vh;
 }
 
-.row:nth-child(odd) {
-  background: lightgrey;
-}
+    .row:nth-child(odd) {
+        background: lightgrey;
+    }
 
 
 /* MEDIA QUERIES - Mobile First */
 /* Tablet */
 @media only screen and (max-width: 768px) and (min-width: 425px) {
-  .col-m-1 {width: 8.33%;}
-  .col-m-2 {width: 16.66%;}
-  .col-m-3 {width: 25%;}
-  .col-m-4 {width: 33.33%;}
-  .col-m-5 {width: 41.66%;}
-  .col-m-6 {width: 50%;}
-  .col-m-7 {width: 58.33%;}
-  .col-m-8 {width: 66.66%;}
-  .col-m-9 {width: 75%;}
-  .col-m-10 {width: 83.33%;}
-  .col-m-11 {width: 91.66%;}
-  .col-m-12 {width: 100%;}
+    .col-m-1 {
+        width: 8.33%;
+    }
 
-  [class*="col-"] {
-    float: left;
-    padding: 15px;
-    /*background: darkgrey;*/
-  }
+    .col-m-2 {
+        width: 16.66%;
+    }
 
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+    .col-m-3 {
+        width: 25%;
+    }
+
+    .col-m-4 {
+        width: 33.33%;
+    }
+
+    .col-m-5 {
+        width: 41.66%;
+    }
+
+    .col-m-6 {
+        width: 50%;
+    }
+
+    .col-m-7 {
+        width: 58.33%;
+    }
+
+    .col-m-8 {
+        width: 66.66%;
+    }
+
+    .col-m-9 {
+        width: 75%;
+    }
+
+    .col-m-10 {
+        width: 83.33%;
+    }
+
+    .col-m-11 {
+        width: 91.66%;
+    }
+
+    .col-m-12 {
+        width: 100%;
+    }
+
+    [class*="col-"] {
+        float: left;
+        padding: 15px;
+        /*background: darkgrey;*/
+    }
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
 }
 
 /* Desktop */
 @media only screen and (min-width: 769px) {
-  body {
-    /*width: 70%; */
-    margin: 0 auto;
-    /*background: aqua;*/
-  }
 
-  .land-content {
-    font-size: 2em;
-  }
+    /* Navigation Elements */
+    nav {
+        position: fixed;
+        width: 70px;
+        height: 100vh;
+        /* should fix bug, check on iOS float: left;*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px 0;
+        font-size: 0.8em;
+        background: rgba(255, 255, 255, 0.90);
+    }
+        nav ul {
+            list-style: none;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /*background: aquamarine;*/
+            border-right: grey solid 1px;
+            padding: 10px 0;
+            padding-right: 0px;
+            text-align: right;
+        }
+        nav li {
+            flex-grow: 1;
+            display: flex;
+        }
+            nav li a {
+                display: block;
+                flex-grow: 1;
+                margin: 0 auto;
+                vertical-align: middle;
+                font-size: 0;
+            }
+            nav li:last-child {
+                margin-bottom: 0;
+            }
+    .about {
+        background: url(../assets/images/svg/AboutIcon.svg) no-repeat center;
+        background-size: 40%;
+    }
+    .skills {
+        background: url(../assets/images/svg/SkillsIcon.svg) no-repeat center;
+        background-size: 40%;
+    }
+    .projects {
+        background: url(../assets/images/svg/ProjectsIcon.svg) no-repeat center;
+        background-size: 40%;
+    }
+    .contact {
+        background: url(../assets/images/svg/ContactIcon.svg) no-repeat center;
+        background-size: 40%;
+    }
+    .content {
+        width: 70%;
+        margin: 0 auto;
+    }
 
-  .logo {
-    height: 50px;
-  }
+    .logo {
+        height: 50px;
+    }
+    h1 {
+        font-size: 500%;
+    }
+    h4 {
+        font-size: 80%;
+    }
 
-  /* Responsive Grid Classes */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
+    .land-content a {
+        height: 50px;
+        width: 50px;
+        opacity: 0.8;
+    }
 
-  [class*="col-"] {
-    float: left;
-    padding: 15px;
-    /*background: darkgrey;*/
-  }
+        .land-content a:hover {
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+            opacity: 1;
+        }
 
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+    /* Responsive Grid Classes */
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    [class*="col-"] {
+        float: left;
+        padding: 15px;
+        /*background: darkgrey;*/
+    }
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
 }
