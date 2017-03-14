@@ -18,11 +18,17 @@
     margin: 0;
     padding: 0;
     font-family: Lato;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
     background: rgb(229, 229, 229);
 }
 
+button:focus, button:active, a:active, a:hover {
+    outline: 0;
+}
 /* END OF EVERYTHING*/
 
 /* LANDING SECTION */
@@ -32,6 +38,10 @@ header {
     background-size: cover;
     background-position: center;
     font-family: Leelawadee, Arial, sans-serif;
+}
+header a, header a:visited {
+    color: inherit;
+    text-decoration: none;
 }
 
 .land-content {
@@ -46,7 +56,6 @@ h1 {
     font-size: 300%;
     /*undecided:   font-family: Leelawadee;*/
 }
-
 h4 {
     font-size: 70%;
     font-family: Leelawadee;
@@ -57,13 +66,10 @@ h4 {
 .land-content ul {
     margin-top: 20px;
 }
-
 .land-content a {
     display: inline-block;
     height: 50px;
     width: 50px;
-    background-repeat: no-repeat;
-    background-position: center;
     font-size: 0;
     border-radius: 50%;
     border: 1px solid black;
@@ -73,43 +79,82 @@ h4 {
 
 .github {
     background-image: url(../assets/images/svg/Github.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
-
 .behance {
     background-image: url(../assets/images/svg/Behance.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
-
 .resume {
     background-image: url(../assets/images/svg/ResumeIcon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 /* END OF LANDING SECTION */
 
+/* MOBILE HEADER SECTION */
+nav {
+    background: rgba(255, 255, 255, 0.90);
+}
+nav ul {
+    display: none;
+}
+nav ul a {
+    display: block;
 
-header a, header a:visited {
-    color: inherit;
-    text-decoration: none;
+    text-align: center;
+}
+.nav-bar {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+        position: fixed;
+
+    padding: 20px 10px;
+}
+
+.home {
+    background: url(../assets/images/svg/HomeIcon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.about {
+    background: url(../assets/images/svg/AboutIcon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.skills {
+    background: url(../assets/images/svg/SkillsIcon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.projects {
+    background: url(../assets/images/svg/ProjectsIcon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.contact {
+    background: url(../assets/images/svg/ContactIcon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .logo {
     /*background: pink;*/
-    display: block;
+    display: inline-block;
     font-size: 0;
-    height: 40px;
+    width: 40px;
+    height: 30px;
+
     background-image: url("../assets/images/svg/DS-Logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.8;
-}
-
-    .logo:hover {
-        opacity: 90;
-    }
-
-.top-btn, .top-btn:visited {
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
+    opacity: 1;
 }
 /* End of LANDING */
 
@@ -201,25 +246,23 @@ header a, header a:visited {
     nav {
         position: fixed;
         width: 70px;
-        height: 100vh;
+        height: 90vh;
         /* should fix bug, check on iOS float: left;*/
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 30px 0;
-        font-size: 0.8em;
-        background: rgba(255, 255, 255, 0.90);
+        background: rgba(255, 255, 255, 0);
     }
         nav ul {
             list-style: none;
-            height: 70%;
+            height: 80%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            /*background: aquamarine;*/
+
             border-right: grey solid 1px;
-            padding: 10px 0;
-            padding-right: 0px;
+
             text-align: right;
         }
         nav li {
@@ -231,11 +274,23 @@ header a, header a:visited {
                 flex-grow: 1;
                 margin: 0 auto;
                 vertical-align: middle;
-                font-size: 0;
+                /*font-size: 0;*/
             }
-            nav li:last-child {
-                margin-bottom: 0;
+            nav li a span {
+                display: inline-block;
+                -ms-transform: rotate(-90deg); /* IE 9 */
+                -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+                transform: rotate(-90deg);
+                margin: auto 0;
             }
+    nav li:first-child {
+        display: none;
+    }
+    .nav-bar {
+        padding: 0px;
+        position: static;
+    }
+
     .about {
         background: url(../assets/images/svg/AboutIcon.svg) no-repeat center;
         background-size: 40%;
@@ -252,13 +307,19 @@ header a, header a:visited {
         background: url(../assets/images/svg/ContactIcon.svg) no-repeat center;
         background-size: 40%;
     }
-    .content {
-        width: 70%;
-        margin: 0 auto;
-    }
-
     .logo {
-        height: 50px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin: 0px auto;
+        opacity: 0.8;
+        transition: opacity linear .15s;
+    }
+        .logo:hover {
+            opacity: 1;
+        }
+    .hamburger {
+        display: none;
     }
     h1 {
         font-size: 500%;
@@ -271,68 +332,60 @@ header a, header a:visited {
         height: 50px;
         width: 50px;
         opacity: 0.8;
+        transition: opacity, box-shadow linear 0.25s;
     }
-
         .land-content a:hover {
-            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
             opacity: 1;
         }
+
+    .content {
+        width: 70%;
+        margin: 0 auto;
+    }
 
     /* Responsive Grid Classes */
     .col-1 {
         width: 8.33%;
     }
-
     .col-2 {
         width: 16.66%;
     }
-
     .col-3 {
         width: 25%;
     }
-
     .col-4 {
         width: 33.33%;
     }
-
     .col-5 {
         width: 41.66%;
     }
-
     .col-6 {
         width: 50%;
     }
-
     .col-7 {
         width: 58.33%;
     }
-
     .col-8 {
         width: 66.66%;
     }
-
     .col-9 {
         width: 75%;
     }
-
     .col-10 {
         width: 83.33%;
     }
-
     .col-11 {
         width: 91.66%;
     }
-
     .col-12 {
         width: 100%;
     }
-
     [class*="col-"] {
         float: left;
         padding: 15px;
         /*background: darkgrey;*/
     }
-
     .row::after {
         content: "";
         clear: both;

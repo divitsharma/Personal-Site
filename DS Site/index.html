@@ -7,21 +7,30 @@
     <title>Divit Sharma</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="styles/hamburgers.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/master.css">
+
 </head>
 
-
 <body>
-    <header name="top">
-        <nav>
-            <a class="logo" href="index.html">Divit Sharma</a>
+    <header id="top">
+        <nav role="navigation">
+            <div class="nav-bar">
+                <a class="logo" href="index.html">Divit Sharma</a>
+                <button class="hamburger hamburger--collapse" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+
             <ul>
-                <li><a class="about" href="#About">1</a></li>
-                <li><a class="skills" href="#Skills">2</a></li>
-                <li><a class="projects" href="#Projects">3</a></li>
-                <li><a class="contact" href="#Contact">4</a></li>
+                <li><a class="home" href="#top"><span>Home</span></a></li>
+                <li><a class="about" href="#About"><span>About</span></a></li>
+                <li><a class="skills" href="#Skills"><span>Skills</span></a></li>
+                <li><a class="projects" href="#Projects"><span>Projects</span></a></li>
+                <li><a class="contact" href="#Contact"><span>Contact</span></a></li>
             </ul>
-            <a class="top-btn" href="#top">^</a>
         </nav>
 
         <div class="land-content">
@@ -43,7 +52,7 @@
                 <p>Of course we all should benefit from the knowledge of others&mdash;people who trust themselves to actually follow through their weird, unrealistic, and sometimes stubborn, naive ideas. But we should be able to learn and grow from our own mistakes, too. If you are willing to experiment and tackle failures along the way, you have to be able to make your own mistakes. And that means making an effort to beat the odds&mdash;no matter how doomed that shiny new idea might initially look.</p>
                 <p>In fact, usually that initial creative spark sounds just so ridiculous, unreasonable and improbable at first, and often even worse after the first critical review. But sometimes it doesn't matter. Yes, it just doesn't matter. Perhaps it's your time to succeed where others failed, and risk your personal time to gain strength, experience and wisdom that others gained before you. Perhaps you are doomed to fail, but you might build something in the end that will lead you to success in the future as you combine that idea with the inspiration you'll find in your cellar years from now.</p>
             </div>
-            
+
         </section>
 
         <section id="Skills" class="row">
@@ -71,8 +80,8 @@
     </div>
 
 
-
-
     <!-- JS -->
+    <script src="scripts/hamburger.js" type="text/javascript"></script>
+    <script src="scripts/header_resize.js" type="text/javascript"></script>
 </body>
 </html>
