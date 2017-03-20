@@ -1,0 +1,188 @@
+/* Desktop */
+@media only screen and (min-width: 769px) {
+    header  {
+        background-image: url("../assets/images/Mountains.png");
+    }
+
+    /* Navigation Elements */
+    #mobile-menu {
+      display: none;
+    }
+    .tint {
+        display: none;
+    }
+
+    nav {
+        position: fixed;
+        width: 70px;
+        height: 100vh;
+        overflow: hidden;
+        /* should fix bug, check on iOS float: left;*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px 0;
+    }
+        nav ul {
+            list-style: none;
+            height: 80%;
+            display: block;
+
+            /*border-right: grey solid 1px;*/
+
+            text-align: center;
+        }
+        nav ul li {
+            height: 25%;
+            display: flex;
+        }
+            nav li a {
+                border: none;
+                font-size: 1em;
+
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                transition: cubic-bezier(0.3,0,1,0.24) 0.5s;
+                transition-delay: 0.1s;
+            }
+            nav li span {
+                display: inline-block;
+                -ms-transform: rotate(-90deg) translate(0, 50px); /* IE 9 */
+                -webkit-transform: rotate(-90deg) translate(0, 50px); /* Chrome, Safari, Opera */
+                transform: rotate(-90deg) translate(0, 50px);
+                transition: cubic-bezier(0.3,0,1,0.24) 0.5s;
+                transition-delay: 0.1s;
+
+                margin: auto 0;
+                position: relative;
+            }
+            nav li:hover span {
+                transform: rotate(-90deg) translate(0, 0);
+                transition: cubic-bezier(0,0.85,0.24,0.97) .3s;
+                transition-delay: 0.1s;
+            }
+            nav li:hover a {
+                background-position-x: -50px;
+                border-right: 1px solid DodgerBlue;
+                transition: cubic-bezier(0,0.85,0.24,0.97) .3s;
+                transition-delay: 0.1s;
+            }
+
+    .nav-bar {
+        padding: 0px;
+        position: static;
+    }
+
+    .about {
+        background: url(../assets/images/svg/AboutIcon.svg) no-repeat center;
+    }
+    .skills {
+        background: url(../assets/images/svg/SkillsIcon.svg) no-repeat center;
+    }
+    .projects {
+        background: url(../assets/images/svg/ProjectsIcon.svg) no-repeat center;
+    }
+    .contact {
+        background: url(../assets/images/svg/ContactIcon.svg) no-repeat center;
+    }
+    .about, .skills, .projects, .contact {
+      background-size: 35%;
+    }
+    .logo {
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin: 0px auto;
+        opacity: 0.8;
+        transition: opacity linear .15s;
+    }
+        .logo:hover {
+            opacity: 1;
+        }
+    .hamburger {
+      display: none;
+    }
+
+
+    /* Land Content */
+    h1 {
+        font-size: 500%;
+    }
+    h4 {
+        font-size: 80%;
+    }
+
+    .land-content a {
+        height: 50px;
+        width: 50px;
+        opacity: 0.8;
+        transition: opacity, box-shadow linear 0.25s;
+    }
+        .land-content a:hover {
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+            opacity: 1;
+        }
+
+    .content {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    /* Content */
+    .description {
+        height: 50%;
+        background: white;
+        padding: 50px;
+        border-radius: 2px;
+    }
+
+
+    /* Responsive Grid Classes */
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+    [class*="col-"] {
+        float: left;
+        padding: 15px;
+        /*background: darkgrey;*/
+    }
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}

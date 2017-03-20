@@ -3,5 +3,8 @@ function CalcVH() {
   document.getElementById("top").setAttribute("style", "height:" + vH + "px");
 }
 
-CalcVH();
-window.addEventListener('onorientationchange', CalcVH, true);
+var mq = window.matchMedia("(max-width: 768)");
+if (mq.matches){
+  CalcVH();
+  window.addEventListener('onorientationchange', CalcVH, true);
+}

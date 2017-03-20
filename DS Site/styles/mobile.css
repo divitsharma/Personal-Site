@@ -1,0 +1,214 @@
+header {
+    height: 100vh;
+    background-image: url("../assets/images/MountainsSmall.png");
+    background-size: cover;
+    background-position: center;
+    font-family: Leelawadee, Arial, sans-serif;
+}
+header a, header a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* MOBILE HEADER SECTION */
+nav {
+  background: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav-bar {
+    padding: 20px;
+}
+.logo {
+    /*background: pink;*/
+    display: inline-block;
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+
+    background: url("../assets/images/svg/DS-Logo.svg") no-repeat center/contain;
+    opacity: 1;
+}
+.hamburger {
+    display: block;
+    float: right;
+    font-size: 0;
+}
+
+nav ul {
+    display: none;
+}
+
+#mobile-menu {
+  font: bold 0.8em Leelawadee;
+  text-transform: uppercase;
+
+
+  display: block;
+  position: fixed;
+  width: 100%;
+  /*height: 70vh;*/
+  background-color: white;
+  transform: translateY(-100%);
+
+  transition: cubic-bezier(0.33,0,0.97,0.24) .5s;
+  transition-delay: 0.2s;
+}
+
+#mobile-menu li {
+  display: block;
+  /*height: 16%;*/
+  overflow: hidden;
+}
+#mobile-menu a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    text-align: center;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+
+    font-size: 1.5em;
+}
+.bottom-bar {
+    height: 1px;
+    width: 0;
+    margin: 0 10%;
+    float: left;
+    background: rgb(63, 64, 69);
+    transition: cubic-bezier(0.33,0,0.97,0.24) .5s;
+}
+#mobile-menu li:first-child a {
+  border-top: none;
+}
+#mobile-menu a span {
+  letter-spacing: 2px;
+}
+#mobile-menu a img {
+  height: 1em;
+  margin-right: 20px;
+}
+#mobile-menu li:last-child {
+  //height: 20%;
+  background-color: rgb(63, 64, 69);
+}
+#mobile-menu li:last-child a {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 32%;
+}
+#mobile-menu li:last-child img {
+  height: 70%;
+}
+
+.tint {
+  position: fixed;
+  height: 0;
+  width: 100%;
+  box-shadow: 0 10px 150px 10px black;
+  opacity: 0;
+
+  transition: cubic-bezier(0.33,0,0.97,0.24) 0.5s;
+}
+#mobile-menu.is-open {
+  transform: translateY(70px);
+  transition: cubic-bezier(0.19,1,0.22,1) .8s;
+  transition-delay: 0s;
+}
+.tint.is-open {
+    height: 75vh;
+    box-shadow: 0 10px 150px 10px black;
+    background-color: black;
+    opacity: 1;
+
+    transition-property: opacity;
+    transition: cubic-bezier(0.19,1,0.22,1) 1s;
+    transition-delay: 0.3s;
+}
+.animatable {
+    height: 0;
+    width: 100%;
+    
+    transition: cubic-bezier(0.33,0,0.97,0.24) .5s;
+}
+#mobile-menu.is-open .animatable {
+    height: 11.5vh;
+    
+    transition: cubic-bezier(0.19,1,0.22,1) .8s;
+}
+#mobile-menu.is-open .bottom-bar {
+    width: 80%;
+    transition: cubic-bezier(0.19,1,0.22,1) .8s;
+}
+
+
+/* LANDING SECTION */
+.land-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 300%;
+    /*undecided:   font-family: Leelawadee;*/
+}
+h4 {
+    font-size: 70%;
+    font-family: Leelawadee;
+    font-weight: bold;
+    color: grey;
+}
+
+.land-content ul {
+    margin-top: 20px;
+}
+.land-content a {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    font-size: 0;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+}
+
+.github {
+    background-image: url(../assets/images/svg/Github.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.behance {
+    background-image: url(../assets/images/svg/Behance.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.resume {
+    background-image: url(../assets/images/svg/ResumeIcon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* END OF LANDING SECTION */
+
+
+
+[class*="col-"] {
+    float: none;
+    width: auto;
+    padding: 15px;
+}
+
+.row {
+    padding: 10px 0;
+    min-height: 100vh;
+}
+    .row:nth-child(odd) {
+        background: lightgrey;
+    }
